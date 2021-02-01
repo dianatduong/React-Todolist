@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import Categories from './Components/Categories'
 
 class App extends Component {
+
     state = {
         categories: [
            { name: "Produce" },
@@ -12,14 +13,28 @@ class App extends Component {
          ]
     }
 
+    toggleHandler = (index) => {
+      console.log("Button clicked");
+    }
+
     render () {
         return (
             <div className="container">
-                <Categories name={this.state.categories[0].name} /><br />
-                <Categories name={this.state.categories[1].name} /><br />
-                <Categories name={this.state.categories[2].name} /><br />
-                <Categories name={this.state.categories[3].name} /><br />
-                <Categories name={this.state.categories[4].name} />
+                <Categories 
+                  name={this.state.categories[0].name} 
+                  click={this.toggleHandler}/><br />
+                <Categories 
+                  name={this.state.categories[1].name} 
+                  click={this.toggleHandler}/><br />
+                <Categories 
+                  name={this.state.categories[2].name} 
+                  click={this.toggleHandler}/><br />
+                <Categories 
+                  name={this.state.categories[3].name} 
+                  click={this.toggleHandler}/><br />
+                <Categories 
+                  name={this.state.categories[4].name} 
+                  click={this.toggleHandler}/>
             </div>  
         )
     }
