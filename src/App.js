@@ -1,12 +1,27 @@
+import React, {Component} from 'react'
+import Categories from './Components/Categories'
 
-import './App.css';
+class App extends Component {
+    state = {
+        categories: [
+           { name: "Produce" },
+           { name: "Meat" },
+           { name: "Dairy" },
+           { name: "Frozen" },
+           { name: "Pantry"}
+         ]
+    }
 
-function App() {
-  return (
-    <div className="container">
-      
-    </div>
-  );
+    render () {
+        return (
+            <div className="container">
+                <Categories name={this.state.categories[0].name} /><br />
+                <Categories name={this.state.categories[1].name} /><br />
+                <Categories name={this.state.categories[2].name} /><br />
+                <Categories name={this.state.categories[3].name} /><br />
+                <Categories name={this.state.categories[4].name} />
+            </div>  
+        )
+    }
 }
-
 export default App;
