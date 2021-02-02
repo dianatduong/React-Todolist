@@ -11,8 +11,7 @@ class App extends Component {
            { name: "Dairy" },
            { name: "Frozen" },
            { name: "Pantry"}
-         ],
-         addItems: ["apple"]
+         ]
     }
 
     toggleHandler = () => {
@@ -23,6 +22,7 @@ class App extends Component {
             inputBox.placeholder = "add product"
       categoryBtn.parentNode.insertBefore(inputBox, categoryBtn.nextSibling);
     }
+
 
     render () {
         return (
