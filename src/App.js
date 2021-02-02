@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Categories from './Components/Categories'
 import './App.css'
 
-const App = props => {
+const App = () => {
 
   const [ categoriesState, setCategoriesState  ] = useState ({
       categories: [
