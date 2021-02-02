@@ -1,10 +1,13 @@
-import React from 'react'
+import React from 'react';
+import './Categories.css';
 
 
 
 const categories = (props) => {
     return (
-        <button onClick={props.click}>{props.name}</button>
+        <button className="categoryBtn" onClick={props.click}>{props.name}</button>
     )
 }
+
+
 export default categories;
