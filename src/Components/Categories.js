@@ -5,7 +5,7 @@ import './Categories.css';
 
 const categories = (props) => {
     return (
-        <button className="categoryBtn" onClick={props.click}>{props.name}</button>
+        <button id="categoryId" className="categoryBtn" onClick={props.click}>{props.name}</button>
     )
 }
 

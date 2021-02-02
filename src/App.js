@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import Categories from './Components/Categories'
+import './App.css'
 
 class App extends Component {
 
@@ -10,17 +11,23 @@ class App extends Component {
            { name: "Dairy" },
            { name: "Frozen" },
            { name: "Pantry"}
-         ]
+         ],
+         addItems: ["apple"]
     }
 
-    toggleHandler = (index) => {
-      console.log("Button clicked");
+    toggleHandler = () => {
+      //console.log("Button clicked");
+      const categoryBtn = document.getElementById('categoryId');
+      const inputBox = document.createElement('input');
+            inputBox.setAttribute('type', 'text');
+            inputBox.placeholder = "add product"
+      categoryBtn.parentNode.insertBefore(inputBox, categoryBtn.nextSibling);
     }
 
     render () {
         return (
             <div className="container">
-                <Categories 
+                <Categories
                   name={this.state.categories[0].name} 
                   click={this.toggleHandler}/><br />
                 <Categories 
