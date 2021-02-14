@@ -1,16 +1,18 @@
 import React, { useState } from 'react'
 
-const TodoForm(props) {
+const TodoForm = (props) => {
 
     const [input, setInput] = useState('') //initial state, setState
 
     const handleSubmit = e => {
         e.preventDefault(); //prevents page refresh
 
-        //props.onSubmit({
-           // id: Math.floor(Math.random() * 10000), 
-           // text: input
-       // })
+        props.onSubmit({
+           id: Math.floor(Math.random() * 10000), 
+            text: input
+        });
+
+        setInput('')
     }
 
     const handleChange = e => {
