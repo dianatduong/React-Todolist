@@ -23,7 +23,7 @@ const TodoList = () => {
     }
 
     const removeTodo = id => {
-        const removeArr = [...todos].filter(todo => todo.id !== id)
+        const removeArr = [...todos].filter(todo => todo.id !== id);
         setTodos(removeArr);
     }
 
@@ -42,12 +42,12 @@ const TodoList = () => {
    
     return (
         <div>
-           <TodoForm onSubmit={addTodo}/>
+           <TodoForm onSubmit={addTodo} />
            <Todo 
                 todos={todos} 
-                complete={completeTodo} 
+                completeTodo={completeTodo} 
                 removeTodo={removeTodo} 
-                updateTodo={updateTodo}/>
+                updateTodo={updateTodo} />
         </div>
     )
 }
